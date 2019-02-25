@@ -6,10 +6,11 @@ from list_sort import list_sort
 class listsortTest(unittest.TestCase):
 
     def test_integer_input(self):
-        self.assertEqual(list_sort(5), 'Invalid Input')
+        self.assertEqual(
+            list_sort([5]), {'evens': [], 'odds': [5], 'chars': []})
 
     def test_string_input(self):
-        self.assertEqual(list_sort('string'), 'Invalid Input')
+        self.assertEqual(list_sort('string'), {'evens': [], 'odds': [], 'chars': ['g', 'i', 'n', 'r', 's', 't']})
 
     def test_empty_list(self):
         self.assertEqual(list_sort([]), {'evens': [], 'odds': [], 'chars': []})
